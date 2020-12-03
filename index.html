@@ -3,9 +3,115 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Objects</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body{
+          font-family: Arial, Helvetica, sans-serif;
+          background-color: #333;  
+          color: white;
+        }
+        .container{
+            width: 80%;
+            margin: auto;
+            padding: 20px;
+        }
+        .row{
+            display: flex;
+            width: 100%;
+            height: 100%;
+            min-height: 30px;
+            justify-content: space-around;
+        }
+        h2, p{
+            text-align: center;
+            text-transform: uppercase;
+        }
+        h2{
+            margin: 30px 0;
+        }
+        p.title{
+            display: flex;
+            width: calc(100% / 3);
+            height: 100%;
+            min-height: 30px;
+            border: 1px solid white;
+            justify-content: center;
+            align-items: center;
+        } 
+        .col{
+            width: calc(100% / 3);
+            height: 100%;
+            min-height: 30px;
+            text-align: center;
+        }
+        p{
+            display: flex;
+            height: 30px;
+            width: 100%;
+            border: 1px solid white;
+            align-items: center;
+            justify-content: center;
+
+        }
+        
+    </style>
 </head>
 <body>
+    <section id="primaParte" class="container">
+        <h2>Studente</h2>
+        <div class="row">
+            <p class="title">nome</p>
+            <p class="title">cognome</p>
+            <p class="title">eta'</p>
+        </div>
+        <div class="row">
+            <p class="title nome">lista</p>
+            <p class="title cognome">lista</p>
+            <p class="title età">lista</p>
+        </div>
+    </section>
+
+    <section id="secondaParte" class="container">
+        <h2>Studenti del corso</h2>
+            <div class="row">
+                <p class="title">nome</p>
+                <p class="title">cognome</p>
+                <p class="title">età</p>
+            </div>
+            <div class="row">
+                <div class="col nome">
+                    <!-- <p>lista</p> -->
+                </div>
+                <div class="col cognome">
+                    <!-- <p>lista</p> -->
+                </div>
+                <div class="col età">
+                    <!-- <p>lista</p> -->
+                </div>
+            </div>
+    </section>
+
+    <section id="terzaParte" class="container">
+        <h2>Nuovo studente</h2>
+            <div class="row">
+                <p class="title">nome</p>
+                <p class="title">cognome</p>
+                <p class="title">eta'</p>
+            </div>
+            <div class="row">
+                <p>lista</p>
+                <p>lista</p>
+                <p>lista</p>
+            </div>
+    </section>
+
+    <!-- SCRIPT -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="main.js"></script>
 </body>
 </html>
