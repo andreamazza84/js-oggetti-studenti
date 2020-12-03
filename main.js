@@ -48,14 +48,19 @@ $(function(){
     
     if(printList){       
         listaNome = "";
+        listaCognome ="";
+        listaEta ="";
         i = 0;
         while(i < studenti.length){
             var studente = studenti[i];
             listaNome = `<p>${studente['nome']}</p>`;
+            listaCognome = `<p>${studente['cognome']}</p>`;
+            listaEta = `<p>${studente['eta']} anni</p>`;
+
             console.log(listaNome);
             $('#secondaParte > .row > .nome').append(listaNome);
-            $('#secondaParte > .row > .cognome').append(listaNome);
-            $('#secondaParte > .row > .età').append(listaNome);
+            $('#secondaParte > .row > .cognome').append(listaCognome);
+            $('#secondaParte > .row > .età').append(listaEta);
             i++
         }
     }
@@ -68,17 +73,13 @@ $(function(){
         var eta = Number(prompt("Inserisci l'ETA' del nuovo studente"));
         var nuovoStudente = {'nome':nome, 'cognome':cognome, 'eta':eta};
         studenti.push(nuovoStudente);
-              
-        $('#secondaParte > .row > .nome').append(nuovoStudente.nome);
-        $('#secondaParte > .row > .cognome').append(nuovoStudente.cognome);
-        $('#secondaParte > .row > .età').append(nuovoStudente.eta);
+        listaNome = `<p>${nuovoStudente['nome']}</p>`;
+        listaCognome = `<p>${nuovoStudente['cognome']}</p>`;
+        listaEta = `<p>${nuovoStudente['eta']} anni</p>`;      
+        $('#secondaParte > .row > .nome').append(listaNome);
+        $('#secondaParte > .row > .cognome').append(listaCognome);
+        $('#secondaParte > .row > .età').append(listaEta);
     }
-
-
-
-        
-        
-    
 });
 
 
