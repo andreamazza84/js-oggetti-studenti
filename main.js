@@ -17,9 +17,7 @@ var y = d.getFullYear();
 var studente = {
     'nome': 'Andrea',
     'cognome': 'Mazza',
-    'eta': function () {
-        return (y - 1984);
-    },
+    'eta': function() {return (y - 1984);},
     'filmPreferiti': ['Il Grande Lebowski', 'The Wolf Of Wallstreet'],
     'strumenti': 'batteria',
     'sport': 'arrampicata',
@@ -34,7 +32,6 @@ for (var key in studente) {
 console.log(studente.eta());
 
 //"Creare un array di oggetti di studenti. Ciclare su tutti gli studenti e stampare per ognuno nome e cognome", 
-
 var studenti = [
     {
         'nome': 'Andrea',
@@ -63,8 +60,18 @@ var studenti = [
         }
 ];
 
+//Stampare a schermo nome e cognome della lista
 for(var i = 0; i < studenti.length; i++){
     var studente = studenti[i];
-    console.log("Nome: " + studente['nome']);
-    console.log("Cognome: " + studente['cognome']);
+    console.log("Studente "+ (i+1) + " Nome: " + studente['nome']);
+    console.log("Studente "+ (i+1) + " Cognome: " + studente['cognome']);
 }
+
+//"Dare la possibilità all'utente attraverso 3 prompt di aggiungere un nuovo oggetto studente inserendo nell'ordine: nome, cognome e età."
+
+var nome = prompt("Inserisci il NOME del nuovo studente");
+var cognome = prompt("Inserisci il COGNOME del nuovo studente");
+var eta = Number(prompt("Inserisci l'ETA' del nuovo studente"));
+var nuovoStudente = {nome, cognome, eta};
+studenti.push(nuovoStudente);
+console.log(studenti);
